@@ -45,9 +45,9 @@ metadata:
     categories: Big Data
     certified: "false"
     description: An operator for managing the Apache Spark clusters and intelligent applications that spawn those clusters.
-    support: jkremser@redhat.com
+    support: rlucente@redhat.com
     createdAt: 2019-01-17T12:00:00Z
-    containerImage: quay.io/radanalyticsio/spark-operator:1.0.1
+    containerImage: quay.io/rlucente-se-jboss/spark-operator:1.0.1
 spec:
   displayName: Apache Spark Operator
   description: |
@@ -116,7 +116,7 @@ spec:
             spec:
               containers:
                 - name: spark-operator
-                  image: quay.io/radanalyticsio/spark-operator:1.0.1
+                  image: quay.io/rlucente-se-jboss/spark-operator:1.0.1
                   imagePullPolicy: Always
                   env:
                   - name: WATCH_NAMESPACE
@@ -157,7 +157,7 @@ spec:
   maturity: alpha
   version: 1.0.1
   maintainers:
-    - email: jkremser@redhat.com
+    - email: rlucente@redhat.com
       name: Red Hat, Inc.
   labels:
     alm-owner-enterprise-app: spark-operator

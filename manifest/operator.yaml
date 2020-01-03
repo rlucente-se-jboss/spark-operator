@@ -1,4 +1,4 @@
-# for creating these resources it requires the user to be logged in as system admin
+---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -37,10 +37,14 @@ spec:
       serviceAccountName: spark-operator
       containers:
       - name: spark-operator
-        image: quay.io/radanalyticsio/spark-operator:latest-released
+        image: quay.io/rlucente-se-jboss/spark-operator:latest-released
         env:
         - name: WATCH_NAMESPACE # if not specified all the namespaces will be watched; ~ denotes the same ns as the operator's
           value: "~"
+        - name: DEFAULT_SPARK_APP_IMAGE
+          value: "quay.io/radanalyticsio/openshift-spark:2.4-latest"
+        - name: DEFAULT_SPARK_CLUSTER_IMAGE
+          value: "quay.io/jkremser/openshift-spark:2.3-latest"
         #- name: CRD # if false, the operator will watch on ConfigMaps
         #  value: "true"
         #- name: FULL_RECONCILIATION_INTERVAL_S
@@ -61,4 +65,3 @@ spec:
             memory: "512Mi"
             cpu: "1000m"
         imagePullPolicy: Always
-
