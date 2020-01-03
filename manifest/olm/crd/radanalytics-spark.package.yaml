@@ -1,4 +1,4 @@
-packageName: radanalytics-spark
+packageName: spark-operator
 channels:
 - name: alpha
-  currentCSV: sparkoperator.v1.0.1
+  currentCSV: spark-operator.v1.0.1
