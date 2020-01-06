@@ -1,4 +1,4 @@
----
+# for creating these resources it requires the user to be logged in as system admin
 apiVersion: v1
 kind: ServiceAccount
 metadata:
