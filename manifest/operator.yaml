@@ -15,7 +15,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: spark-operator
-    namespace: default
+    namespace: spark-example
 ---
 apiVersion: apps/v1
 kind: Deployment
